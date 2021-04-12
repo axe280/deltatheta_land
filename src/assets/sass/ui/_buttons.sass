@@ -1,0 +1,169 @@
+// all page buttons
+button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  vertical-align: middle
+  margin: 0
+  padding: 0
+  background: none
+  border: none
+  outline: none
+  box-shadow: none
+  transition: background-color $transDefault, color $transDefault, border-color $transDefault
+
+  .icon
+    transition: fill $transDefault, stroke $transDefault
+
+// default
+.btn
+  position: relative
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  vertical-align: middle
+  margin: 0
+  padding: var(--btn-default-size)
+  text-align: center
+  font-weight: 600
+  font-family: var(--main-font-family)
+  font-size: var(--text-ui-lg)
+  line-height: var(--text-ui-lg-lh)
+  text-decoration: none
+  color: var(--btn-color)
+  background-color: var(--btn-bg)
+  border: 1px solid var(--btn-border)
+  border-radius: var(--radius-lg)
+  outline: none
+  cursor: pointer
+  transition: background-color $transDefault, color $transDefault, border-color $transDefault
+
+  &:hover
+    text-decoration: none
+    background-color: var(--btn-hover)
+    border-color: var(--btn-hover)
+    color: var(--btn-color)
+
+  &:active
+    background-color: var(--btn-active)
+    border-color: var(--btn-active)
+
+  .icon
+    width: 24px
+    height: 24px
+    fill: var(--btn-color)
+    stroke: var(--btn-color)
+    margin-left: 12px
+
+    &:first-child
+      margin-right: 12px
+      margin-left: 0
+
+  // disabled
+  &[disabled],
+  &.disabled,
+  &.disabled:hover,
+  &[disabled]:hover,
+  &.disabled:active,
+  &[disabled]:active
+    cursor: default
+    background-color: var(--btn-disabled)
+    border-color: var(--btn-border-disabled)
+    color: var(--btn-color-disabled)
+
+    .icon
+      fill: var(--btn-color-disabled)
+      stroke: var(--btn-color-disabled)
+
+      &._success
+        fill: var(--success-color)
+        stroke: var(--success-color)
+
+
+// btn icon
+.btn_icon
+  padding: 14px
+  
+  .icon,
+  .icon:first-child
+    margin: 0
+
+// primary
+.btn_primary
+  --btn-color: var(--btn-primary-color)
+  --btn-color-disabled: var(--btn-primary-color-disabled)
+  --btn-bg: var(--btn-primary)
+  --btn-disabled: var(--btn-primary-disabled)
+  --btn-hover: var(--btn-primary-hover)
+  --btn-active: var(--btn-primary-active)
+
+  &.btn_shadow
+    box-shadow: 0px 4px 10px rgba(22, 126, 241, 0.25)
+
+// danger
+.btn_danger
+  --btn-color: var(--btn-primary-color)
+  --btn-color-disabled: var(--btn-primary-color-disabled)
+  --btn-bg: var(--danger-color)
+  --btn-disabled: var(--danger-color-disabled)
+  --btn-hover: var(--danger-color)
+  --btn-active: var(--danger-color)
+
+// btn secondary
+.btn_secondary
+  --btn-bg: var(--btn-secondary)
+  --btn-disabled: var(--btn-secondary-disabled)
+
+// btn ghost
+.btn_ghost
+  --btn-border: var(--btn-ghost-border)
+  --btn-border-disabled: var(--btn-ghost-border-disabled)
+
+// btn ghost
+.btn_border
+  --btn-color: var(--primary-color)
+  --btn-color-disabled: var(--btn-primary-color-disabled)
+  --btn-border: var(--primary-color)
+
+// btn icon primary
+.btn_ic-primary
+  &:hover
+    --btn-hover: var(--btn-primary-hover)
+
+    .icon
+      fill: var(--btn-primary-color)
+      stroke: var(--btn-primary-color)
+    
+  .icon
+    fill: var(--primary-color)
+    stroke: var(--primary-color)
+
+// btn lg
+.btn_lg
+  +mixin_btn_lg()
+
+// btn sm
+.btn_sm
+  +mixin_btn_sm()
+
+// btn xs
+.btn_xs
+  +mixin_btn_xs()
+
+// btn xxs
+.btn_xxs
+  +mixin_btn_xxs()
+
+// btn max
+.btn_max
+  width: 100%
+
+.btn_min-width
+  min-width: 160px
+
+.btn_mobile-max
+  +breakpoint-max-width($m-md)
+    width: 100%
+
+.btn_max-rounded
+  border-radius: var(--radius-xl)

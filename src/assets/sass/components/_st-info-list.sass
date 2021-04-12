@@ -1,0 +1,48 @@
+.st-info-list
+  &._md
+    li
+      margin-bottom: 16px
+      font-size: var(--text-md)
+      line-height: var(--text-md-lh)
+
+      +breakpoint($md)
+        margin-bottom: 24px
+
+  li
+    display: flex
+    justify-content: space-between
+    margin-bottom: 12px
+    font-size: var(--text-sm)
+    line-height: var(--text-sm-lh)
+
+    &:last-child
+      margin-bottom: 0
+
+    +breakpoint($lg)
+      margin-bottom: 16px
+      font-size: var(--text-md)
+      line-height: var(--text-md-lh)
+
+  &__tt
+    margin-right: 10px
+    font-weight: 600
+    color: var(--text-color-medium)
+
+  &__info
+    text-align: right
+
+    strong
+      white-space: nowrap
+
+    small
+      display: block
+      white-space: nowrap
+      margin-top: 4px
+      font-size: var(--text-sm)
+      line-height: var(--text-sm-lh)
+      color: var(--text-color-medium)
+      margin-left: 6px
+
+      +breakpoint($md)
+        margin-top: 0
+        display: inline

@@ -1,0 +1,206 @@
+.tabs-bl
+  padding: 24px 16px 30px
+  margin-top: 30px
+  border-radius: var(--radius-default)
+  background: rgba(186, 218, 208, 0.25)
+
+  +breakpoint($md)
+    padding: 24px 24px 44px
+
+  +breakpoint($lg)
+    padding: 32px
+
+  +breakpoint($xl)
+    padding: 54px 40px 44px
+
+  &_sell
+    background: rgba(213, 186, 218, 0.25)
+
+  &_buy
+    background: #FCF7ED
+
+    +breakpoint($md)
+      .tabs-list-info li:nth-child(5)::before
+        display: none
+
+.tabs-head
+  margin-bottom: 30px
+
+  +breakpoint($md)
+    margin-bottom: 45px
+
+  +breakpoint($xl)
+    max-width: 980px
+    margin-left: auto
+    margin-right: auto
+
+.tabs-tt
+  display: block
+  margin-bottom: 10px
+  font-weight: 700
+  font-size: var(--heading-h5)
+  line-height: var(--heading-h5-lh)
+
+  +breakpoint($md)
+    margin-bottom: 20px
+
+  +breakpoint($xl)
+    margin-bottom: 30px
+
+.tabs-list-info
+  text-align: center
+
+  +breakpoint($md)
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  li
+    position: relative
+    margin-bottom: 20px
+    padding-bottom: 45px
+
+    &:last-child
+      padding-bottom: 20px
+
+      &::before
+        display: none
+
+    &::before
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: 0
+      margin-left: -1px
+      width: 2px
+      height: 30px
+      z-index: 2
+      background-color: #C3C2C2
+
+    +breakpoint($md)
+      width: 50%
+      padding-bottom: 0
+      margin-bottom: 45px
+
+      &:last-child
+        padding-bottom: 0
+
+      &::before
+        display: none
+
+      &:nth-child(odd)
+        &::before
+          display: block
+          bottom: auto
+          top: 57px
+          left: 100%
+          margin: 0
+          width: 80px
+          height: 2px
+          margin-left: -40px
+
+    +breakpoint($lg)
+      width: 33.33%
+
+      &:nth-child(odd)
+        &::before
+          display: none
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(5)
+        &::before
+          display: block
+          bottom: auto
+          top: 57px
+          left: 100%
+          margin: 0
+          width: 80px
+          height: 2px
+          margin-left: -40px
+
+  &__icon
+    position: relative
+    margin-bottom: 20px
+
+    .icon
+      stroke: none
+      fill: none
+
+      &:first-child
+        height: 117px
+        width: 100%
+
+      &:last-child
+        position: absolute
+        left: 50%
+        transform: translate(-50%)
+
+    img.icon
+      &:first-child
+        width: auto
+
+    .icon-pic-cristal
+      top: 34px
+      margin-left: -1px
+
+    .icon-pic-house
+      width: 38px
+      height: 36px
+      top: 25px
+      margin-left: 2px
+
+    .icon-pic-process-success
+      top: 26px
+      width: 76px
+      height: 49px
+
+    .icon-pic-device
+      top: -3px
+      width: 65px
+      height: 110px
+
+    .icon-pic-form
+      top: 18px
+      width: 65px
+      height: 75px
+
+    .icon-pic-graph
+      top: 24px
+      width: 99px
+      height: 69px
+
+    .icon-pic-sell
+      top: 28px
+      width: 41px
+      height: 37px
+
+    .icon-pic-clock
+      top: 25px
+      width: 60px
+      height: 60px
+      margin-left: 3px
+
+    .icon-pic-d
+      top: 37px
+      width: 22px
+      height: 19px
+
+    .icon-pic-buy
+      top: 27px
+      width: 40px
+      height: 37px
+      margin-left: 2px
+
+  &__about
+    max-width: 250px
+    margin: 0 auto
+    font-size: var(--text-sm)
+    line-height: 21px
+
+    +breakpoint($md)
+      font-size: var(--text-md)
+
+    span
+      display: block

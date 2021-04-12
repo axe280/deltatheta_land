@@ -1,0 +1,24 @@
+// &::-webkit-scrollbar-button
+// &::-webkit-scrollbar-track
+// &::-webkit-scrollbar-track-piece
+// &::-webkit-scrollbar-thumb
+// &::-webkit-scrollbar-corner
+// &::-webkit-resizer
+
+/* Max width $md */
+@media only screen and (max-width: $m-md)
+  .mobile-scroll-wrapper
+    margin-left: calc(var(--container-space) * -1)
+    margin-right: calc(var(--container-space) * -1)
+    padding-left: var(--container-space)
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: none
+    overflow: -moz-scrollbars-none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+      display: none
+      height: 0
+      width: 0
+/* end media max width $md */

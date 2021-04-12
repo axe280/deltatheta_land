@@ -1,0 +1,47 @@
+.labels-group
+  display: flex
+  flex-wrap: wrap
+
+  .label-i
+    margin-right: 8px
+
+.label-i
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  padding: 3px 12px
+  font-weight: 600
+  font-size: var(--text-ui-sm)
+  line-height: var(--text-ui-sm-lh)
+  border-radius: 11px
+  background-color: var(--bg-light)
+
+  +breakpoint($lg)
+    padding-top: 7px
+    padding-bottom: 7px
+
+  &:last-child
+    margin-right: 0
+
+  &._sm
+    padding: 6px 8px
+
+  &._danger
+    background-color: rgba(var(--danger-color-rgb), .1)
+    color: var(--danger-color)
+
+  &._ghost
+    box-shadow: inset 0 0 0 1px var(--border-color)
+    background-color: transparent
+
+  &._primary
+    color: var(--primary-color)
+    background-color: rgba(var(--primary-color-rgb), .1)
+
+  &._warning
+    color: var(--warning-color)
+    background-color: rgba(var(--warning-color-rgb), .1)
+
+  &._success
+    color: var(--success-color)
+    background-color: rgba(var(--success-color-rgb), .1)

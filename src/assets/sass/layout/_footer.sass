@@ -1,0 +1,95 @@
+.footer
+  background-color: var(--bg-body-2)
+  padding: 40px 0 20px
+  text-align: center
+
+  +breakpoint($md)
+    padding: 60px 0 50px
+    text-align: left
+
+  +breakpoint($xl)
+    padding: 96px 0
+
+  .container
+    position: relative
+    padding-bottom: 40px
+
+    +breakpoint($md)
+      padding-bottom: 0
+
+.copy
+  color: rgba(#303030, .5)
+  font-size: var(--text-md)
+  line-height: var(--text-sm-md)
+  
+  +breakpoint-max-width($md)
+    position: absolute
+    bottom: 0
+    left: var(--container-space)
+    right: var(--container-space)
+    font-size: var(--text-xs)
+    line-height: var(--text-xs-lh)
+
+.footer-head
+  margin-bottom: 44px
+  display: flex
+  align-items: center
+
+  .logo
+    margin: 0 auto
+    flex-shrink: 0
+    max-width: 100%
+
+    +breakpoint($md)
+      margin: 0 20px 0 0
+
+    img
+      width: 180px
+      height: auto
+
+.footer-row
+  +breakpoint($md)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .soc-inline
+    +breakpoint-max-width($m-md)
+      justify-content: center
+
+      a,
+      a:last-child
+        margin: 0 5px
+      
+
+    +breakpoint($md)
+      margin-bottom: 12px
+
+.footer-nav
+  margin-bottom: 30px
+  font-size: var(--text-md)
+  line-height: var(--text-md-lh)
+
+  +breakpoint($md)
+    display: flex
+    margin-bottom: 0
+  
+  ul
+    margin-bottom: 30px
+
+    +breakpoint($md)
+      margin-bottom: 0
+      margin-right: 50px
+
+  li
+    margin-bottom: 5px
+
+  b
+    display: block
+    margin-bottom: 12px
+
+  a
+    color: var(--text-color-dark)
+
+    &:hover
+      color: var(--primary-color-hover)

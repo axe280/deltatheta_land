@@ -1,0 +1,145 @@
+.st-mob-table
+  +breakpoint-max-width($m-md)
+    .table-row
+      padding-top: 16px
+      padding-bottom: 16px
+
+      &.table-head
+        display: none
+
+    .table-col
+      width: 100%
+      display: flex
+      justify-content: space-between
+      margin-bottom: 16px
+
+      &:last-child
+        margin-bottom: 0
+
+    .table-opt-val
+      display: none
+
+    .st-mob-table-tt
+      display: block
+      color: var(--text-color-medium)
+
+.st-mob-table-tt
+  display: none
+
+.table
+  margin-left: -16px
+  margin-right: -16px
+
+  +breakpoint($lg)
+    margin-left: -24px
+    margin-right: -24px
+    margin-bottom: -8px
+
+.table-row
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 13px 16px
+  transition: background-color $transDefault
+  margin: -1px 0
+
+  &::before
+    content: ''
+    position: absolute
+    left: 16px
+    right: 16px
+    bottom: 0
+    height: 1px
+    z-index: 2
+    background-color: var(--border-color)
+    transition: background-color $transDefault
+  
+  &:hover
+    z-index: 3
+    background-color: var(--bg-light)
+
+    &::before
+      background-color: transparent
+
+  +breakpoint($md)
+    padding: 17px 16px
+    flex-wrap: nowrap
+    border-radius: var(--radius-default)
+
+  +breakpoint($lg)
+    padding-left: 24px
+    padding-right: 24px
+
+    &::before
+      left: 24px
+      right: 24px
+
+  +breakpoint-max-width($m-md)
+    &._opened
+      z-index: 3
+      background-color: var(--bg-light)
+
+      &::before
+        background-color: transparent
+
+      .icon-chevron-down
+        transform: rotate(-180deg)
+
+      .hidden-mobile
+        display: flex
+
+  &:last-child
+    &::before
+      display: none
+  
+  &.table-head
+    padding-top: 5px
+    padding-bottom: 5px
+    margin: 0
+
+    &::before
+      display: none
+
+    &:hover
+      background: none
+
+    .table-col
+      color: var(--text-color-medium)
+
+      +breakpoint($md)
+        font-size: var(--text-ui-sm)
+        line-height: var(--text-ui-sm-lh)
+
+.table-col
+  font-size: var(--text-ui-sm)
+  line-height: var(--text-ui-sm-lh)
+
+  +breakpoint($lg)
+    font-size: var(--text-ui-md)
+    line-height: var(--text-ui-md-lh)
+
+  strong
+    text-align: right
+
+    +breakpoint($md)
+      text-align: left
+
+  &__mob-tt
+    display: inline-block
+    vertical-align: top
+    min-width: 50px
+    margin-right: 5px
+    color: var(--text-color-medium)
+
+    +breakpoint($md)
+      display: none
+
+  .icon-chevron-down
+    transition: transform $transDefault
+
+.table-opt-val
+  margin-left: 4px
+
+  +breakpoint($md)
+    margin-left: 6px

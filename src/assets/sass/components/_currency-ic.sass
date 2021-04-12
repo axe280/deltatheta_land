@@ -1,0 +1,147 @@
+.currency-ic
+  display: inline-flex
+  align-items: center
+  white-space: nowrap
+
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    flex-grow: 0
+    margin-right: 6px
+
+    img
+      position: relative
+      vertical-align: top
+      z-index: 2
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      box-shadow: 0 0 0 1px #fff
+
+    img + img
+      margin-left: -4px
+      z-index: 1
+
+  &__text
+    font-weight: 600
+    font-size: var(--text-ui-md)
+    line-height: var(--text-ui-md-lh)
+    text-transform: uppercase
+
+  &._md
+    .currency-ic__icon
+      margin-right: 12px
+
+      img
+        width: 28px
+        height: 28px
+        box-shadow: 0 0 0 2px #fff
+
+      img + img
+        margin-left: -4px
+
+    .currency-ic__text
+      font-size: var(--text-ui-lg)
+      line-height: var(--text-ui-lg-lh)
+
+      +breakpoint($md)
+        font-size: var(--text-ui-xl)
+        line-height: var(--text-ui-xl-lh)
+
+    &._vertical
+      .currency-ic__icon
+        margin-bottom: 12px
+
+        img
+          width: 32px
+          height: 32px
+
+      .currency-ic__text
+        font-size: var(--text-ui-lg)
+        line-height: var(--text-ui-lg-lh)
+
+        +breakpoint($lg)
+          font-size: var(--text-ui-xl)
+          line-height: var(--text-ui-xl-lh)
+
+  &._md-desktop
+    .currency-ic__icon
+      margin-right: 8px
+
+      img
+        width: 24px
+        height: 24px
+        box-shadow: 0 0 0 2px #fff
+
+      img + img
+        margin-left: -8px
+
+    .currency-ic__text
+      font-size: var(--text-ui-lg)
+      line-height: var(--text-ui-lg-lh)
+
+    +breakpoint($lg)
+      .currency-ic__icon
+        margin-right: 12px
+
+        img
+          width: 28px
+          height: 28px
+
+        img + img
+          margin-left: -4px
+
+      .currency-ic__text
+        font-size: var(--text-ui-xl)
+        line-height: var(--text-ui-xl-lh)
+
+  &._xl-adapt
+    .currency-ic__icon
+      margin-right: 12px
+
+      +breakpoint($lg)
+        margin-right: 16px
+
+      img
+        width: 28px
+        height: 28px
+        box-shadow: 0 0 0 2px #fff
+
+        +breakpoint($lg)
+          width: 32px
+          height: 32px
+
+      img + img
+        margin-left: -4px
+
+        +breakpoint($md)
+          margin-left: -8px
+
+        +breakpoint($lg)
+          margin-left: -12px
+
+    .currency-ic__text
+      font-size: var(--text-ui-xl)
+      line-height: var(--text-ui-lg-xl)
+
+      +breakpoint($md)
+        font-size: var(--text-ui-xl)
+        line-height: var(--text-ui-xl-lh)
+
+      +breakpoint($lg)
+        font-size: var(--text-ui-xxl)
+        line-height: var(--text-ui-xxl-lh)
+
+    &._vertical
+      .currency-ic__icon
+        margin-bottom: 18px
+
+  &._vertical
+    flex-direction: column
+    
+    .currency-ic__icon
+      margin-right: 0
+      margin-bottom: 6px
+

@@ -1,0 +1,384 @@
+/* ----- Page structure ---------------- */
+html, body
+  height: 100%
+
+body
+  margin: 0
+  padding: 0
+  background-color: var(--bg-body)
+
+.page-wrapper
+  display: flex
+  flex-direction: column
+  min-width: 320px
+  min-height: 100%
+  width: 100%
+
+.page-body
+  overflow: hidden
+  flex: 1 0 auto
+
+.footer
+  flex-shrink: 0
+
+.container
+  padding: 0 var(--container-space)
+
+  +breakpoint($lg)
+    max-width: $max-width-layout
+    margin-left: auto
+    margin-right: auto
+
+    &._max-md-bl
+      max-width: $max-width-md-layout
+
+  &._max-sm-bl
+    max-width: $max-width-sm-layout
+    margin: 0 auto
+
+.st-section
+  padding: 50px 0
+
+  +breakpoint($md)
+    padding: 65px 0
+
+  +breakpoint($xl)
+    padding: 90px 0
+
+._gray
+  background-color: var(--bg-body-2)
+
+._max-sm-bl
+  margin: 0 auto
+  max-width: $max-width-sm-layout
+
+.mb-12
+  margin-bottom: 12px
+
+.mb-16
+  margin-bottom: 16px
+
+.mb-24
+  margin-bottom: 24px
+
+.mb-32
+  margin-bottom: 32px
+
+.st-radius-bl
+  padding: 16px
+  background-color: var(--bg-layout-bl)
+  border-radius: var(--radius-default)
+  border: 1px solid var(--st-radius-bl-border)
+  box-shadow: var(--shadow-z-4)
+
+  +breakpoint($md)
+    padding: 24px
+
+  +breakpoint($lg)
+    padding: 32px
+
+  &._overflow
+    overflow: hidden
+
+  &._md-space
+    +breakpoint($md)
+      padding: 24px
+
+  &._sm-space
+    +breakpoint($md)
+      padding: 16px
+
+    +breakpoint($lg)
+      padding: 24px
+
+  &._xs-space
+    padding: 16px
+
+  &._shadow-none
+    box-shadow: none
+
+  &._fill
+    background-color: var(--bg-light)
+
+    .title-site
+      color: var(--text-color-medium)
+
+    .currency-ic
+      .currency-ic__icon
+        img
+          box-shadow: none
+
+  &__head
+    margin-left: -16px
+    margin-right: -16px
+    padding: 8px 16px 0
+    border-bottom: 1px solid var(--border-color)
+
+    +breakpoint($md)
+      margin-left: -24px
+      margin-right: -24px
+      padding: 8px 24px 0
+
+    +breakpoint($lg)
+      margin-left: -32px
+      margin-right: -32px
+      padding: 8px 32px 0
+
+.main-head
+  margin-bottom: 24px
+
+  +breakpoint($md)
+    margin-bottom: 32px
+
+  +breakpoint($lg)
+    margin-bottom: 48px
+
+    &._md
+      margin-bottom: 32px
+
+.flex-jcb
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  .currency-ic__icon
+    img
+      background-color: #fff
+
+.flex-column
+  display: flex
+  flex-direction: column
+
+.st-row
+  +breakpoint($md)
+    display: flex
+    margin-left: calc(var(--col-space-between) * -1)
+
+  +breakpoint($xl)
+    &.show-xl-desktop
+      display: flex
+
+  &._row-group
+    flex-wrap: wrap
+
+.st-col
+  width: 100%
+  margin-bottom: 40px
+
+  &:last-child
+    margin-bottom: 0
+
+  +breakpoint($md)
+    margin-bottom: 0
+    margin-left: var(--col-space-between)
+
+  &.st-col-3
+    +breakpoint($md)
+      width: calc(33.33% - var(--col-space-between))
+
+  &.st-col-4
+    +breakpoint($md)
+      width: calc(25% - var(--col-space-between))
+
+  .flex-column
+    height: 100%
+
+.btns-group
+  .btn
+    +breakpoint-max-width($m-md)
+      margin-top: 12px
+
+      &:first-child
+        margin-top: 0
+
+    +breakpoint($md)
+      margin-right: 16px
+
+.btns-group-max
+  +breakpoint($md)
+    display: flex
+    align-items: center
+  
+  .btn
+    margin-top: 12px
+    width: 100%
+    padding-left: 10px
+    padding-right: 10px
+
+    +breakpoint($md)
+      margin-top: 0
+      margin-left: 16px
+
+    &:first-child
+      margin: 0
+
+.divider
+  height: 1px
+  width: 100%
+  background-color: var(--border-color)
+
+  &._vertical
+    height: 100%
+    width: 1px
+
+// hidden blocks
+.hidden-all
+  display: none
+
+.hidden-mobile
+  display: none
+
+  +breakpoint($md)
+    display: block
+
+.hidden-devices
+  display: none
+
+  +breakpoint($lg)
+    display: block
+
+.hidden-tablet
+  +breakpoint($md)
+    display: none
+
+  +breakpoint($lg)
+    display: block
+
+.hidden-desktop
+  +breakpoint($lg)
+    display: none
+
+.hidden-xl-desktop
+  +breakpoint($xl)
+    display: none
+
+.show-xl-desktop
+  +breakpoint($xl)
+    display: block
+
+.sep-line
+  margin: 24px 0
+  height: 1px
+  background-color: var(--border-color)
+
+  +breakpoint($lg)
+    margin: 32px 0
+
+.section-st-head
+  margin-bottom: 40px
+
+  .title-site_h1
+    margin-bottom: 20px
+
+  p
+    +breakpoint($xl)
+      font-size: var(--text-xl)
+      line-height: var(--text-xl-lh)
+
+.btn-group-center
+  +breakpoint-max-width($m-md)
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+  .btn
+    +breakpoint($md)
+      margin-right: 30px
+
+.st-text-head-bl
+  p
+    margin-bottom: 10px
+
+  h2
+    +breakpoint($md)
+      margin-bottom: 25px
+
+  .btn
+    margin-top: 20px
+
+    +breakpoint($lg)
+      margin-top: 25px
+
+.st-text-row
+  margin-bottom: 30px
+
+  &:last-child
+    margin-bottom: 0
+
+  +breakpoint($md)
+    display: flex
+    justify-content: space-between
+    margin-bottom: 40px
+
+.st-text-col
+  margin-bottom: 30px
+
+  &:last-child
+    margin-bottom: 0
+  
+  +breakpoint($md)
+    width: 48%
+    margin-bottom: 0
+  
+.st-text
+  .btn-group-center
+    .btn
+      margin-top: 20px
+
+      +breakpoint($lg)
+        margin-top: 25px
+  h1, h2, p
+    margin-bottom: 20px
+
+  p
+    &:last-child
+      margin-bottom: 0
+
+  +breakpoint($lg)
+    h1, h2, p
+      margin-bottom: 35px
+
+.max-w-text
+  +breakpoint($lg)
+    max-width: 480px
+
+.st-row-inner
+  display: flex
+  flex-direction: column
+
+  +breakpoint($md)
+    flex-direction: row
+    justify-content: space-between
+
+.st-col-inner
+  order: 1
+
+  +breakpoint($md)
+    max-width: 47%
+    width: 100%
+
+  +breakpoint($xl)
+    max-width: 524px
+  
+  &_pictures
+    order: 2
+    text-align: center
+    margin-top: 40px
+
+    +breakpoint($md)
+      order: 1
+      margin-top: 0
+      text-align: left
+    
+      &:last-child
+        order: 3
+        text-align: right
+
+.mt-md-10
+  +breakpoint($md)
+    margin-top: 10px
+
+.mt-md-20
+  +breakpoint($md)
+    margin-top: 20px

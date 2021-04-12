@@ -1,0 +1,78 @@
+.dd-list-wrap
+  position: relative
+
+.dd-list
+  padding: 8px 16px
+  width: 288px
+  position: absolute
+  top: 100%
+  margin-top: 8px
+  z-index: 15
+  right: 0
+
+  +breakpoint($mobile-s)
+    width: 300px
+
+  +breakpoint($md)
+    padding: 8px 24px
+
+  .divider
+    margin-top: 8px
+    margin-bottom: 8px
+
+.dd-link
+  display: block
+  display: flex
+  align-items: center
+  padding: 8px 12px
+  margin-left: -4px
+  margin-right: -4px
+  color: var(--text-color-dark)
+  border-radius: var(--radius-md)
+  transition: background-color $transDefault
+
+  +breakpoint($md)
+    margin-left: -12px
+    margin-right: -12px
+
+  &:hover
+    color: var(--text-color-dark)
+    background-color: var(--bg-disabled)
+
+    .dd-link__icon
+      background-color: var(--bg-ui-hover)
+
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    margin-bottom: auto
+    margin-right: 16px
+    border-radius: var(--radius-md)
+    width: 40px
+    height: 40px
+    background-color: var(--bg-light)
+
+    .icon
+      width: 20px
+      height: 20px
+
+  &__about
+    strong
+      font-size: var(--text-ui-md)
+      line-height: var(--text-ui-md-lh)
+
+    span
+      display: block
+      margin-top: 4px
+      font-size: var(--text-ui-sm)
+      line-height: var(--text-ui-sm-lh)
+      color: var(--text-color-medium)
+
+  &__aside
+    margin-left: auto
+
+    .icon
+      width: 20px
+      height: 20px

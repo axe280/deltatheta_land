@@ -1,0 +1,75 @@
+.notifications
+  position: fixed
+  z-index: 40
+  right: var(--container-space)
+  bottom: 72px
+  max-width: 288px
+  width: 100%
+
+  +breakpoint($md)
+    bottom: 24px
+    max-width: 360px
+
+  &__item
+    display: flex
+    align-items: center
+    margin-top: 10px
+    font-size: var(--text-sm)
+    line-height: var(--text-sm-lh)
+    background-color: var(--bg-light)
+    border: none
+    box-shadow: none
+    color: var(--text-color-dark)
+
+    button
+      cursor: pointer
+      margin-left: auto
+      flex-shrink: 0
+
+      &:hover
+        .icon
+          fill: var(--icon-color-dark)
+          stroke: var(--icon-color-dark)
+
+      .icon
+        fill: var(--icon-color-medium)
+        stroke: var(--icon-color-medium)
+
+    .icon-info
+      flex-shrink: 0
+      fill: var(--icon-color-light)
+      stroke: var(--icon-color-light)
+
+    +breakpoint($md)
+      font-size: var(--text-md)
+      line-height: var(--text-md-lh)
+
+      .icon-info
+        margin-left: 8px
+
+    &._success
+      background: linear-gradient(0deg, rgba(48, 191, 130, 0.1), rgba(48, 191, 130, 0.1)), #fff
+      color: var(--success-color)
+
+      .icon-info
+        fill: var(--success-color)
+        stroke: var(--success-color)
+      
+    &._danger
+      background: linear-gradient(0deg, rgba(255, 86, 48, 0.1), rgba(255, 86, 48, 0.1)), #fff
+      color: var(--danger-color)
+
+      .icon-info
+        fill: var(--danger-color)
+        stroke: var(--danger-color)
+
+    &._warning
+      background: linear-gradient(0deg, rgba(255, 86, 48, 0.1), rgba(255, 86, 48, 0.1)), #fff
+      color: var(--warning-color)
+
+      .icon-info
+        fill: var(--warning-color)
+        stroke: var(--warning-color)
+
+    .icon-info
+      margin-right: 16px

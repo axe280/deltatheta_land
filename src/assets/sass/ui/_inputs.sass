@@ -1,0 +1,59 @@
+.placeholder
+  color: var(--text-color-disabled)
+
+input,
+textarea
+  +placeholder-color(var(--text-color-disabled))
+
+::-webkit-contacts-auto-fill-button
+  opacity: 0
+
+input[type="password"]::-webkit-contacts-auto-fill-button
+  opacity: 1
+
+input[type="search"]
+  -webkit-appearance: none
+
+input,
+textarea,
+select,
+.custom-select
+  position: relative
+  width: 100%
+  padding: 0
+  height: 20px
+  border: none
+  font-family: var(--main-font-family)
+  font-size: var(--text-ui-md)
+  line-height: var(--text-ui-md-lh)
+  color: var(--text-color-dark)
+  background-color: transparent
+  outline: none
+  border-radius: none
+  -webkit-appearance: none
+  box-shadow: none
+
+  +breakpoint($lg)
+    height: 24px
+    font-size: var(--text-ui-lg)
+    line-height: var(--text-ui-lg-lh)
+
+textarea
+  vertical-align: top
+  height: 130px
+  resize: none
+
+  +breakpoint($lg)
+    height: 130px
+
+select
+  background-image: url('../img/chevron-down.svg')
+  background-position: 100% 50%
+  background-repeat: no-repeat
+  background-size: 24px 24px
+
+  option[value=""][disabled]
+    display: none
+
+  option
+    color: var(--text-color-dark)

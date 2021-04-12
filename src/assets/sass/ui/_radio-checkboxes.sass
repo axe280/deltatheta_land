@@ -1,0 +1,99 @@
+/* checkbox and radio */
+._hidden-inner-input
+  position: relative
+  overflow: hidden
+
+  input
+    width: 0
+    height: 0
+    position: absolute
+    left: -20px
+    top: -20px
+    border: none
+    padding: 0
+    visibility: hidden
+
+.ui-st-radio,
+.ui-st-checkbox
+  position: relative
+  padding-left: 32px
+  font-size: var(--text-ui-sm)
+  line-height: 20px
+  user-select: none
+
+  +breakpoint($lg)
+    font-size: var(--text-ui-md)
+    line-height: 22px
+
+  input
+    width: 0
+    height: 0
+    visibility: hidden
+    position: absolute
+    left: 0
+    top: 0
+
+.fake-control
+  position: absolute
+  left: 0
+  top: 0
+  width: 20px
+  height: 20px
+  background-color: var(--bg-light)
+  border-radius: 4px
+  transition: background-color $transDefault, border-color $transDefault
+
+  +breakpoint($lg)
+    top: 1px
+
+  .icon
+    position: absolute
+    left: 1px
+    top: 1px
+    width: 18px
+    height: 18px
+    fill: #fff
+    stroke: #fff
+    transform: scale(0)
+    transition: all $transDefault
+
+// .ui-st-radio
+//   .fake-control
+//     border-radius: 50%
+
+//     &::before
+//       content: ''
+//       position: absolute
+//       left: 3px
+//       top: 3px
+//       width: 8px
+//       height: 8px
+//       background-color: var(--primary-color)
+//       border-radius: 50%
+//       background-color: inherit
+//       transform: scale(0)
+//       transition: transform $transDefault, background-color $transDefault
+
+//   input:checked ~ .fake-control
+//     &::before
+//       background-color: var(--primary-color)
+//       transform: scale(1)
+
+.ui-st-checkbox
+  input:checked ~ .fake-control
+    background-color: var(--primary-color)
+    
+    .icon
+      transform: scale(1)
+
+
+
+
+
+
+
+
+
+
+
+

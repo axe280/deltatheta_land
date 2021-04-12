@@ -1,0 +1,132 @@
+.header
+  position: relative
+  z-index: 50
+  margin-bottom: 20px
+
+  +breakpoint($md)
+    margin-bottom: 40px
+
+  +breakpoint($lg)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+
+  +breakpoint($xl)
+    margin-bottom: 70px
+
+.header-inner
+  display: flex
+  align-items: center
+  padding: 20px 0
+
+  +breakpoint($md)
+    padding-top: 20px
+    padding-bottom: 20px
+
+  +breakpoint($lg)
+    padding-top: 24px
+    padding-bottom: 24px
+
+.logo
+  max-width: 30px
+  overflow: hidden
+  text-decoration: none
+
+
+  +breakpoint($md)
+    max-width: 180px
+    margin-right: 75px
+
+  img
+    height: 28px
+    max-width: none
+
+    +breakpoint($md)
+      height: 30px
+
+.header-nav
+  display: flex
+  align-items: center
+  font-size: var(--text-ui-md)
+  line-height: var(--text-ui-md-lh)
+
+  +breakpoint-max-width($m-md)
+    margin-left: auto
+
+.header-nav-dd
+  position: relative
+  margin-left: 10px
+
+  &:first-child
+    margin-left: 0
+
+    .head-dd
+      left: 0
+      right: auto
+
+  +breakpoint($mobile-s)
+    margin-left: 16px
+
+  +breakpoint($md)
+    margin-left: 24px
+
+  +breakpoint($lg)
+    margin-left: 32px
+
+  &._open
+    .head-dd
+      display: block
+
+    .header-nav-dd__item
+      .icon
+        transform: rotate(-180deg)
+
+  &__item
+    display: flex
+    align-items: center
+    color: var(--text-color-dark)
+    font-size: 14px
+    line-height: 20px
+    cursor: pointer
+
+    +breakpoint($mobile-s)
+      font-size: 16px
+      line-height: 22px
+
+    .icon
+      flex-shrink: 0
+      margin-left: 5px
+      width: 8px
+      height: 5px
+      fill: var(--text-color-dark)
+      stroke: var(--text-color-dark)
+      transition: transform $transDefault
+
+.head-dd
+  display: none
+  position: absolute
+  top: 100%
+  right: 0
+  margin-top: 10px
+  z-index: 3
+  background-color: #fff
+  padding: 10px
+  border-radius: 10px
+  border: 1px solid var(--border-color)
+  font-size: 14px
+  line-height: 24px
+  box-shadow: var(--shadow-z-4)
+
+  +breakpoint($md)
+    left: 0
+    right: auto
+
+  li
+    white-space: nowrap
+
+  a
+    color: var(--text-color-dark)
+
+    &:hover
+      color: var(--primary-color-hover)

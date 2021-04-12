@@ -1,0 +1,126 @@
+@import 'const';
+
+@mixin placeholder-color($color-pl) {
+  &:-moz-placeholder,
+  &::-moz-placeholder {
+    color: $color-pl;
+    opacity: 1;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color-pl;
+    opacity: 1;
+  }
+
+  &:focus {
+    &:-moz-placeholder,
+    &::-moz-placeholder {
+      opacity: 0;
+    }
+
+    &::-webkit-input-placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin mixin_btn_lg() {
+  padding: var(--btn-lg-size);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-ui-xl);
+  line-height: var(--text-ui-xl-lh);
+
+  &.btn_icon {
+    padding: 22px;
+  }
+}
+
+@mixin mixin_btn_sm() {
+  padding: var(--btn-sm-size);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-ui-md);
+  line-height: var(--text-ui-md-lh);
+
+  .icon {
+    margin-left: 8px;
+    width: var(--btn-sm-icon-size);
+    height: var(--btn-sm-icon-size);
+
+    &:first-child {
+      margin-right: 8px;
+    }
+  }
+
+  &.btn_icon {
+    padding: 13px;
+
+    .icon {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@mixin mixin_btn_xs() {
+  padding: var(--btn-xs-size);
+  border-radius: var(--radius-md);
+  font-size: var(--text-ui-md);
+  line-height: var(--text-ui-md-lh);
+
+  .icon {
+    margin-left: 8px;
+    width: var(--btn-sm-icon-size);
+    height: var(--btn-sm-icon-size);
+
+    &:first-child {
+      margin-right: 8px;
+    }
+  }
+
+  &.btn_icon {
+    padding: 9px;
+
+    .icon {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@mixin mixin_btn_xxs() {
+  padding: var(--btn-xxs-size);
+  border-radius: 14px;
+  font-size: var(--text-ui-sm);
+  line-height: var(--text-ui-sm-lh);
+
+  .icon {
+    margin-left: 8px;
+    width: var(--btn-sm-icon-size);
+    height: var(--btn-sm-icon-size);
+
+    &:first-child {
+      margin-right: 8px;
+    }
+  }
+
+  &.btn_icon {
+    padding: 5px;
+
+    .icon {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@mixin breakpoint($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-width($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}

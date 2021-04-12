@@ -1,0 +1,180 @@
+/* ----- Typography -------------------- */
+*
+  box-sizing: border-box
+
+body
+  font-family: var(--main-font-family)
+  font-size: var(--text-md)
+  line-height: var(--text-md-lh)
+  color: var(--text-color-dark)
+
+  +breakpoint($xl)
+    font-size: var(--text-lg)
+    line-height: var(--text-lg-lh)
+
+.title-site, h1, h2, h3, h4, h5, h6
+  display: block
+  margin: 0 0 16px
+  padding: 0
+  font-weight: 700
+  color: var(--text-heading-color)
+
+  +breakpoint($md)
+    margin-bottom: 20px
+
+h1, .title-site_h1
+  font-size: var(--heading-h1)
+  line-height: var(--heading-h1-lh)
+  
+  +breakpoint($md)
+    margin-bottom: 24px
+
+h2, .title-site_h2
+  margin-bottom: 20px
+  font-size: var(--heading-h2)
+  line-height: var(--heading-h2-lh)
+
+h3, .title-site_h3
+  font-size: var(--heading-h3)
+  line-height: var(--heading-h3-lh)
+  
+  +breakpoint($md)
+    margin-bottom: 20px
+
+h4, .title-site_h4
+  font-size: var(--heading-h4)
+  line-height: var(--heading-h4-lh)
+
+h5, .title-site_h5
+  font-size: var(--heading-h5)
+  line-height: var(--heading-h5-lh)
+
+h6, .title-site_h6
+  font-size: var(--heading-h6)
+  line-height: var(--heading-h6-lh)
+
+ul, ol
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+li
+  margin: 0
+  padding: 0
+
+p
+  margin: 0
+
+p + p
+  margin-top: 16px
+
+b, strong
+  font-weight: 700
+
+.st-list
+  margin-bottom: 10px
+
+  li
+    position: relative
+    padding-left: 24px
+
+    &::before
+      content: ''
+      position: absolute
+      left: 8px
+      top: 8px
+      width: 5px
+      height: 5px
+      z-index: 2
+      background-color: #303030
+      border-radius: 50%
+
+      +breakpoint($xl)
+        top: 11px
+
+.text-bl
+  ul
+    margin-bottom: 20px
+    list-style-type: disc
+    padding-left: 15px
+
+  ol
+    margin-bottom: 20px
+    list-style-type: decimal
+    padding-left: 15px
+
+  li
+    margin-bottom: 10px
+
+.text_center
+  text-align: center
+
+.text_left
+  text-align: left
+
+.text_right
+  text-align: right
+
+.text_uppercase
+  text-transform: uppercase
+
+.text_primary
+  color: var(--primary-color)
+
+.text_danger
+  color: var(--danger-color)
+
+.text_bold
+  font-weight: 700
+
+.text_semibold
+  font-weight: 600
+
+.text-color_medium
+  color: var(--text-color-medium)
+
+img
+  vertical-align: middle
+  max-width: 100%
+
+a, .text_link
+  cursor: pointer
+  color: var(--primary-color)
+  text-decoration: none
+  transition: color $transDefault
+
+  &:hover
+    text-decoration: none
+    color: var(--primary-color-hover)
+
+.icon
+  display: inline-block
+  vertical-align: middle
+  width: 24px
+  height: 24px
+  transition: fill $transDefault, stroke $transDefault
+  fill: var(--icon-color-medium)
+  stroke: var(--icon-color-medium)
+
+  &._success
+    fill: var(--success-color)
+    stroke: var(--success-color)
+
+  &._danger
+    fill: var(--danger-color)
+    stroke: var(--danger-color)
+
+  &._primary
+    fill: var(--primary-color)
+    stroke: var(--primary-color)
+
+.st-date
+  font-size: var(--text-sm)
+  line-height: var(--text-sm-lh)
+  opacity: .5
+
+
+
+
+
+

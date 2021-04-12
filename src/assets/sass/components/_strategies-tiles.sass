@@ -1,0 +1,131 @@
+// .mobile-scroll-wrapper
+//   +breakpoint-max-width($m-md)
+//     margin-left: -33px
+//     margin-right: -33px
+  
+.strategies-tiles
+  display: flex
+
+  +breakpoint-max-width($m-md)
+    &::after
+      content: ''
+      width: 16px
+      flex-shrink: 0
+
+  +breakpoint($md)
+    margin-left: -16px
+
+    &::after
+      display: none
+
+  +breakpoint($xl)
+    margin-left: -30px
+
+.strategy-tile
+  flex-shrink: 0
+  width: 260px
+  padding: 16px 36px 16px 70px
+  margin-left: 16px
+  position: relative
+  background-color: #fff
+  border-radius: var(--radius-md)
+
+  &:nth-child(1)
+    background-color: #EAF3F1
+  &:nth-child(2)
+    background-color: #F1EBF3
+  &:nth-child(3)
+    background-color: #FCF7ED
+
+  &:first-child
+    margin-left: 0
+
+    +breakpoint($md)
+      margin-left: 16px
+
+    +breakpoint($xl)
+      margin-left: 33px
+
+  +breakpoint($md)
+    padding: 24px 24px 34px 70px
+    width: calc(33.33% - 16px)
+
+  +breakpoint($xl)
+    padding: 45px 38px 50px 113px
+    margin-left: 30px
+    width: calc(33.33% - 30px)
+
+    &:last-child
+      margin-bottom: 0
+
+  &._active
+    .btn
+      &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        width: 14px
+        margin: -1px 0 0 -7px
+        height: 2px
+        border-radius: 2px
+        z-index: 20
+        background-color: var(--primary-color)
+        transition: background-color $transDefault
+
+      &:hover
+        &::before
+          background-color: #fff
+
+    .icon-plus
+      opacity: 0
+
+  p
+    font-size: var(--paragraph-sm)
+    line-height: var(--paragraph-sm-lh)
+
+    +breakpoint($xl)
+      font-size: var(--paragraph-lg)
+      line-height: var(--paragraph-lg-lh)
+
+  strong
+    display: block
+    margin-bottom: 8px
+    font-size: var(--heading-h5)
+    line-height: var(--heading-h5-lh)
+    color: var(--text-heading-color)
+
+    +breakpoint($xl)
+      margin-bottom: 16px
+      font-size: var(--heading-h2)
+      line-height: var(--heading-h2-lh)
+
+  &__icon
+    position: absolute
+    left: 16px
+    top: 16px
+
+    +breakpoint($xl)
+      top: 46px
+      left: 40px
+
+    .icon
+      width: 34px
+      height: 34px
+
+      +breakpoint($xl)
+        width: 50px
+        height: 50px
+
+  .btn_icon
+    position: absolute
+    right: 10px
+    bottom: 10px
+
+    +breakpoint($lg)
+      right: 16px
+      bottom: 16px
+
+    +breakpoint($xl)
+      right: 30px
+      bottom: 27px

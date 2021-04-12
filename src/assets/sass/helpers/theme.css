@@ -1,0 +1,193 @@
+:root {
+  /* FONT SIZE */
+  --main-font-family: 'Open Sans', 'Roboto', 'Helvetica', 'Ubuntu', 'Cantarell',
+    'Arial', sans-serif;
+
+  /* font heading size */
+  --heading-h1: 24px;
+  --heading-h1-lh: 30px;
+  --heading-h2: 22px;
+  --heading-h2-lh: 26px;
+  --heading-h3: 20px;
+  --heading-h3-lh: 26px;
+  --heading-h4: 18px;
+  --heading-h4-lh: 24px;
+  --heading-h5: 16px;
+  --heading-h5-lh: 20px;
+  --heading-h6: 14px;
+  --heading-h6-lh: 18px;
+
+  /* font paragraph size */
+  --paragraph-xs: 11px;
+  --paragraph-xs-lh: 16px;
+  --paragraph-sm: 13px;
+  --paragraph-sm-lh: 20px;
+  --paragraph-md: 15px;
+  --paragraph-md-lh: 22px;
+  --paragraph-lg: 18px;
+  --paragraph-lg-lh: 27px;
+
+  /* font text size */
+  --text-xs: 12px;
+  --text-xs-lh: 14px;
+  --text-sm: 14px;
+  --text-sm-lh: 18px;
+  --text-md: 16px;
+  --text-md-lh: 22px;
+  --text-lg: 18px;
+  --text-lg-lh: 26px;
+  --text-xl: 20px;
+  --text-xl-lh: 30px;
+
+  /* font text ui */
+  --text-ui-xs: 11px;
+  --text-ui-xs-lh: 14px;
+  --text-ui-sm: 13px;
+  --text-ui-sm-lh: 18px;
+  --text-ui-md: 15px;
+  --text-ui-md-lh: 20px;
+  --text-ui-lg: 18px;
+  --text-ui-lg-lh: 24px;
+  --text-ui-xl: 20px;
+  --text-ui-xl-lh: 28px;
+  --text-ui-xxl: 24px;
+  --text-ui-xxl-lh: 32px;
+  --text-ui-xxxl: 32px;
+  --text-ui-xxxl-lh: 40px;
+
+  /* THEME COLORS */
+  /* heading color */
+  --text-heading-color: #1a1d29;
+
+  /* text color */
+  --text-color-dark: #303030;
+  --text-color-white: #fff;
+  --text-color-medium: #82848a;
+  --text-color-light: #bfc1c7;
+  --text-color-disabled: #dadce0;
+
+  /* icons color */
+  --icon-color-dark: #313133;
+  --icon-color-medium: #919399;
+  --icon-color-light: #bfc1c7;
+  --icon-color-disabled: #e0e1e6;
+
+  /* main colors */
+  --primary-color: #167ef1;
+  --primary-color-rgb: 22, 126, 241;
+  --primary-color-hover: #1583fc;
+  --success-color: #30bf82;
+  --success-color-rgb: 48, 191, 130;
+  --danger-color: #ff5630;
+  --danger-color-rgb: 255, 86, 48;
+  --danger-color-disabled: #fcdfd9;
+  --warning-color: #ffab00;
+  --warning-color-rgb: 255, 171, 0;
+
+  /* bg colors */
+  --bg-body: #fff;
+  --bg-body-2: #fafbfc;
+  --bg-layout-bl: #fff;
+  --bg-medium: #82848a;
+  --bg-light: #f3f3f5;
+  --bg-disabled: #f9f9fa;
+  --bg-ui-hover: #eff0f2;
+
+  /* border color */
+  --border-color: #e6e7eb;
+  --border-color-hover: #bebebe;
+  --st-radius-bl-border: #f2f2f2;
+
+  /* BTNS */
+  --btn-color: #1e1e1f;
+  --btn-color-disabled: #bfc1c7;
+  --btn-bg: transparent;
+  --btn-disabled: transparent;
+  --btn-hover: var(--bg-ui-hover);
+  --btn-active: var(--bg-ui-hover);
+  --btn-border: var(--btn-bg);
+  --btn-border-disabled: var(--btn-disabled);
+
+  /* primary */
+  --btn-primary-color: #fff;
+  --btn-primary-color-disabled: var(--btn-primary-color);
+  --btn-primary: var(--primary-color);
+  --btn-primary-hover: var(--primary-color-hover);
+  --btn-primary-active: #1583fc;
+  --btn-primary-disabled: #d0e5fc;
+
+  /* secondary */
+  --btn-secondary: #f3f3f5;
+  --btn-secondary-disabled: #f9f9fa;
+
+  /* ghost */
+  --btn-ghost-border: var(--border-color);
+  --btn-ghost-border-disabled: var(--btn-ghost-border);
+
+  /* sizes */
+  --btn-default-size: 12px 30px;
+  --btn-lg-size: 20px 46px;
+  --btn-sm-size: 13px 23px;
+  --btn-xs-size: 9px 14px;
+  --btn-xxs-size: 6px 14px;
+
+  --btn-horizontal-md-screns: 24px;
+
+  /* icon size */
+  --btn-default-icon-size: 24px;
+  --btn-sm-icon-size: 20px;
+
+  /* THEME SHADOW */
+  --shadow-z-1: 0px 2px 2px rgba(0, 0, 0, 0.08);
+  --shadow-z-2: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  --shadow-z-3: 0px 6px 8px rgba(0, 0, 0, 0.08);
+  --shadow-z-4: 0px 8px 12px rgba(0, 0, 0, 0.08);
+  --shadow-z-5: 0px 16px 16px rgba(0, 0, 0, 0.08);
+  --shadow-z-6: 0px 32px 40px rgba(0, 0, 0, 0.08);
+
+  /* THEME RADIUS */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 18px;
+  --radius-default: 20px;
+  --radius-xl: 28px;
+  --radius-xxl: 32px;
+
+  /* THEME OFFSETS */
+  --container-space: 16px;
+  --col-space-between: 32px;
+}
+
+@media only screen and (min-width: 750px) {
+  :root {
+    /* Font sizes */
+    --heading-h1: 32px;
+    --heading-h1-lh: 40px;
+    --heading-h2: 26px;
+    --heading-h2-lh: 34px;
+    --heading-h3: 24px;
+    --heading-h3-lh: 28px;
+    --heading-h4: 22px;
+    --heading-h4-lh: 26px;
+    --heading-h5: 18px;
+    --heading-h5-lh: 24px;
+    --heading-h6: 16px;
+    --heading-h6-lh: 20px;
+
+    /* THEME OFFSETS */
+    --container-space: 24px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  :root {
+    /* Font sizes */
+    --heading-h1: 48px;
+    --heading-h1-lh: 58px;
+    --heading-h2: 28px;
+    --heading-h2-lh: 34px;
+
+    /* THEME OFFSETS */
+    --container-space: 40px;
+  }
+}
