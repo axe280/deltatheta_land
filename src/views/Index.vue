@@ -5,17 +5,18 @@
         <h1>An ecosystem of products for insuring and making money for farmers in the BSC network</h1>
         <div class="main-sec-row">
           <div class="main-phone">
-            <img srcset="@/assets/img/phone-screen.png" alt="">
+            <img v-show="hover == 'lite'" srcset="@/assets/img/phone-screen-lite.png" alt="">
+            <img v-show="hover == 'pro'" srcset="@/assets/img/phone-screen-pro.png" alt="">
           </div>
-          <div class="main-role">
+          <div @mouseenter="hover = 'lite'" class="main-role">
             <div class="title-site title-site_h2">I’m a farmer</div>
             <p>Get insurance against dumping or increase your profits from farming </p>
             <a href="#" class="btn btn_border">Launch delta.theta LITE</a>
           </div>
-          <div class="main-role">
+          <div @mouseenter="hover = 'pro'" class="main-role">
             <div class="title-site title-site_h2">I’m a trader</div>
             <p>Make money on any market movement by trading delta.theta options</p>
-            <a href="#" class="btn btn_primary">Launch delta.theta LITE</a>
+            <a href="#" class="btn btn_primary">Launch delta.theta PRO</a>
           </div>
         </div>
       </div>
@@ -30,8 +31,8 @@
 
         <div class="mobile-scroll-wrapper">
           <div class="strategies-tiles">
-            <div class="strategy-tile" :class="{ _active: true }">
-              <button class="btn btn_xxs btn_ghost btn_icon btn_ic-primary" type="button">
+            <div class="strategy-tile" :class="{ _active: active.hedge }">
+              <button @click="openStrategy('hedge')" class="btn btn_xxs btn_ghost btn_icon btn_ic-primary" type="button">
                 <svg class="icon icon-plus">
                   <use xlink:href="@/assets/img/sprite.svg#plus"></use>
                 </svg>
@@ -45,12 +46,12 @@
               <p>Protect your assets from being dumped with delta.theta! Buy Put option.</p>
             </div>
 
-            <div class="strategy-tile">
-              <a href="#" class="btn btn_xxs btn_ghost btn_icon btn_ic-primary">
+            <div class="strategy-tile" :class="{ _active: active.sell }">
+              <button @click="openStrategy('sell')" class="btn btn_xxs btn_ghost btn_icon btn_ic-primary">
                 <svg class="icon icon-plus">
                   <use xlink:href="@/assets/img/sprite.svg#plus"></use>
                 </svg>
-              </a>
+              </button>
               <div class="strategy-tile__icon">
                 <svg class="icon icon-fig-left">
                   <use xlink:href="@/assets/img/sprite.svg#fig-left"></use>
@@ -60,12 +61,12 @@
               <p>Make more money on farming! Sell Call option.</p>
             </div>
 
-            <div class="strategy-tile">
-              <a href="#" class="btn btn_xxs btn_ghost btn_icon btn_ic-primary">
+            <div class="strategy-tile" :class="{ _active: active.buy }">
+              <button @click="openStrategy('buy')" class="btn btn_xxs btn_ghost btn_icon btn_ic-primary">
                 <svg class="icon icon-plus">
                   <use xlink:href="@/assets/img/sprite.svg#plus"></use>
                 </svg>
-              </a>
+              </button>
               <div class="strategy-tile__icon">
                 <svg class="icon icon-fig-right">
                   <use xlink:href="@/assets/img/sprite.svg#fig-right"></use>
@@ -77,7 +78,7 @@
           </div>
         </div>
 
-        <div class="tabs-bl">
+        <div class="tabs-bl" v-show="active.hedge">
           <div class="tabs-head">
             <div class="tabs-tt">Protect your assets from being dumped with delta.theta! Buy Put option.</div>
             <p>Do you farm and are afraid the asset will drop in value? Buy insurance! Choose an asset, choose an expiration date and choose an insurance rate (Put price). Choose a price at which you are ready to buy insurance or check other participants offer.  </p>
@@ -181,7 +182,7 @@
           </div>
         </div>
 
-        <div class="tabs-bl tabs-bl_sell">
+        <div class="tabs-bl tabs-bl_sell" v-show="active.sell">
           <div class="tabs-head">
             <div class="tabs-tt">Make more money on farming! Sell Call option.</div>
             <p>Do you farm and hold an asset to sell it at a higher rate? Create a call option - a pending sell order on your asset at the rate YOU want and get extra profit as a reward for your position! </p>
@@ -289,7 +290,7 @@
           </div>
         </div>
 
-        <div class="tabs-bl tabs-bl_buy">
+        <div class="tabs-bl tabs-bl_buy" v-show="active.buy">
           <div class="tabs-head">
             <div class="tabs-tt">Make money on pending orders! </div>
             <p>Do you plan to buy the asset cheaper? Create a Put Option, a Buy Pending Order at the price YOU want and earn extra profit on your current position!</p>
@@ -411,5 +412,23 @@
 <script>
 export default {
   name: 'Index',
+  data: () => ({
+    hover: 'lite',
+    active: {
+      hedge: true,
+      sell: false,
+      buy: false,
+    },
+  }),
+  methods: {
+    openStrategy(name) {
+      this.active = {
+        hedge: false,
+        sell: false,
+        buy: false,
+        [name]: true,
+      };
+    },
+  },
 };
 </script>

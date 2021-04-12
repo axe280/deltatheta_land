@@ -7,8 +7,8 @@
         </a>
 
         <nav class="header-nav">
-          <div class="header-nav-dd" :class="{ _open: true }">
-            <span class="header-nav-dd__item">
+          <div class="header-nav-dd" :class="{ _open: opened.first }">
+            <span class="header-nav-dd__item" @click="opened.first = !opened.first">
               How to trade
               <svg class="icon icon-arr-down">
                 <use xlink:href="@/assets/img/sprite.svg#arr-down"></use>
@@ -20,22 +20,22 @@
             </ul>
           </div>
 
-          <div class="header-nav-dd">
-            <span class="header-nav-dd__item">
+          <div class="header-nav-dd" :class="{ _open: opened.second }">
+            <span class="header-nav-dd__item" @click="opened.second = !opened.second">
               Research
               <svg class="icon icon-arr-down">
                 <use xlink:href="@/assets/img/sprite.svg#arr-down"></use>
               </svg>
             </span>
-            <ul class="head-dd">
+            <ul class="head-dd" tabindex="-1" @blur="opened.second = false">
               <li><a href="#">Initiation of coverage</a></li>
               <li><a href="#">Flash notes</a></li>
               <li><a href="#">Trading ideas</a></li>
             </ul>
           </div>
 
-          <div class="header-nav-dd" :class="{ _open: true }">
-            <span class="header-nav-dd__item">
+          <div class="header-nav-dd" :class="{ _open: opened.third }">
+            <span class="header-nav-dd__item" @click="opened.third = !opened.third">
               About
               <svg class="icon icon-arr-down">
                 <use xlink:href="@/assets/img/sprite.svg#arr-down"></use>
@@ -58,5 +58,12 @@
 
 export default {
   name: 'Header',
+  data: () => ({
+    opened: {
+      first: false,
+      second: false,
+      third: false,
+    },
+  }),
 };
 </script>
